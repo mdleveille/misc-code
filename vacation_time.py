@@ -8,10 +8,10 @@ Inputs:
 
 ** Notes **
     - If your desired vacation date happens to be a pay day, the vacation time will include the time you recieve on that pay day.
-        - EX: If you have zero vacation time at the start of a pay period and you want to take time off the Friday after next (pay day) you will have accrued 7.3 hours by that Friday.
+        - Ex: If you have zero vacation time at the start of a pay period and you want to take time off the Friday after next (pay day) you will have accrued 7.3 hours by that Friday.
 """
 
-# Prompt user for desired vaction day and create targetDate datetime object
+# Prompt user for desired vaction day and create targetDate datetime object, with format error handling
 while True:
     try:
         vacationDate = input("When do you want to go on vacation?\nFormat: MM/DD/YYYY \n>> ")
@@ -50,5 +50,5 @@ for d in range(0, diff.days + 1):
 
 vacationTime += paydayCount * 7.3845
 
-# Print vacation balances
+# Print vacation balance
 print("You will have %.1f days (%.1f hours) of vacation time by %s/%s/%s." % (vacationTime / 8, vacationTime, vacationMonth, vacationDay, vacationYear))
